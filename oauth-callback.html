@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tesla OAuth Callback</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { font-family: -apple-system, system-ui, sans-serif; margin: 2rem; line-height: 1.5; }
+code { word-break: break-all; display: block; background: #f4f4f4; padding: 1rem; border-radius: 8px; }
+button { font-size: 1rem; padding: 0.6rem 1.2rem; margin-top: 1rem; }
+</style>
+</head>
+<body>
+<h1>Authorization complete</h1>
+<p>Copy the full address below and send it back to Muse:</p>
+<code id="u"></code>
+<button onclick="navigator.clipboard.writeText(location.href)">Copy URL</button>
+<script>document.getElementById('u').textContent = location.href;</script>
+</body>
+</html>
